@@ -9,13 +9,13 @@ section .text
 _start:
     mov eax, SYS_WRITE
     mov ebx, STDOUT
-    mov ecx, string
-    mov edx, length
+    mov ecx, STRING
+    mov edx, LENGTH
     int 0x80
 
     mov eax, SYS_EXIT
     int 0x80
 
 section .data
-    string db 'Hello, world!', 0xa
-    length equ $ - string
+    STRING db 'Hello, world!', 0xa
+    LENGTH equ $ - STRING
