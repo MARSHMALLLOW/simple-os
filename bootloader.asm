@@ -1,16 +1,21 @@
+SYS_EXIT  equ 1
+SYS_WRITE equ 4
+STDIN     equ 0
+STDOUT    equ 1
+
 section .text
     global _start
 
-_start:                                      ;tell linker entry point
-    mov eax, 4                               ;system call number (sys_write)
-    mov ebx, 1                               ;file descriptor (stdout)
-    mov ecx, string                          ;message to write
-    mov edx, length                          ;message length
-    int 0x80                                ;call kernel
+_start:
+    mov eax, SYS_WRITE
+    mov ebx, STDOUT
+    mov ecx, string
+    mov edx, length
+    int 0x80
 
-    mov eax, 1                               ;system call number (sys_exit)
-    int 0x80                                ;call kernel
+    mov eax, SYS_EXIT
+    int 0x80
 
 section .data
-    string db 'Hello, world!', 0xa                 ;our dear string
-    length equ $ - string                             ;length of our dear string
+    string db 'Hello, world!', 0xa
+    length equ $ - string
