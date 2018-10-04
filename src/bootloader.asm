@@ -17,5 +17,5 @@ _start:
     int 0x80
 
 section .data
-    STRING db 'Hello, world!', 0xa
+    STRING db 'Hello, world!'
     LENGTH equ $ - STRING
