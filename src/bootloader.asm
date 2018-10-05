@@ -15,7 +15,7 @@ section .text
     global _start
     
 _start:
-    MOV [STRING], dword 'Candy'
+    MOV [STRING], dword 'Robo'
     write_string STRING, LENGTH
     write_string STARS, STARS_LENGTH
     call exit
