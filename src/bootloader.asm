@@ -16,6 +16,7 @@ section .text
     
 _start:
     write_string STRING, LENGTH
+    write_string STARS, STARS_LENGTH
     call exit
 
 exit:
@@ -26,3 +27,6 @@ exit:
 section .data
     STRING db 'Hello, world!'
     LENGTH equ $ - STRING
+
+    STARS times 9 db '*'
+    STARS_LENGTH equ $ - STARS
