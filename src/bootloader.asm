@@ -3,11 +3,11 @@ SYS_WRITE equ 4
 STDIN     equ 0
 STDOUT    equ 1
 
-%macro writeLine 1
+%macro writeLine 2
     mov eax, SYS_WRITE
     mov ebx, STDOUT
     mov ecx, %1
-    mov edx, $ - %2
+    mov edx, %2
     int 0x80
 %endmacro
 
@@ -15,7 +15,7 @@ section .text
     global _start
     
 _start:
-    writeLine STRING
+    writeLine STRING LENGTH
     call exit
 
 exit:
@@ -25,3 +25,4 @@ exit:
 
 section .data
     STRING db 'Hello, world!'
+    LENGTH equ $ - STRING
