@@ -13,8 +13,12 @@ _start:
     mov edx, LENGTH
     int 0x80
 
+    call exit
+
+exit:
     mov eax, SYS_EXIT
     int 0x80
+    ret
 
 section .data
     STRING db 'Hello, world!'
