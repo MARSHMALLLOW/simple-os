@@ -3,7 +3,7 @@ SYS_WRITE equ 4
 STDIN     equ 0
 STDOUT    equ 1
 
-%macro writeLine 2
+%macro write_string 2
     mov eax, SYS_WRITE
     mov ebx, STDOUT
     mov ecx, %1
@@ -15,7 +15,7 @@ section .text
     global _start
     
 _start:
-    writeLine STRING LENGTH
+    write_string STRING, LENGTH
     call exit
 
 exit:
