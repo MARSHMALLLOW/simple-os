@@ -15,6 +15,7 @@ section .text
     global _start
     
 _start:
+    MOV [STRING], dword 'Candy'
     write_string STRING, LENGTH
     write_string STARS, STARS_LENGTH
     call exit
@@ -25,7 +26,7 @@ exit:
     ret
 
 section .data
-    STRING db 'Hello, world!', 0xa
+    STRING db 'Hello world!', 0xa
     LENGTH equ $ - STRING
 
     STARS times 10 db '*'
