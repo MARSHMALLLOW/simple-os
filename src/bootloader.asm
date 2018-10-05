@@ -25,7 +25,7 @@ exit:
     ret
 
 section .data
-    STRING db 'Hello, world!'
+    STRING db 'Hello, world!', 0xa
     LENGTH equ $ - STRING
 
     STARS times 10 db '*'
