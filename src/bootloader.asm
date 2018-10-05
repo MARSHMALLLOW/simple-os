@@ -11,8 +11,7 @@ STDOUT    EQU 1
     INT 0x80
 %endmacro
 
-section .text
-    global _start
+global _start
     
 _start:
     MOV [STRING], DWORD 'Robo'
