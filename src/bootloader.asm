@@ -28,5 +28,5 @@ section .data
     STRING db 'Hello, world!'
     LENGTH equ $ - STRING
 
-    STARS times 9 db '*'
+    STARS times 10 db '*'
     STARS_LENGTH equ $ - STARS
