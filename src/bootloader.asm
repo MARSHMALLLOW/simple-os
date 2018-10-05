@@ -35,5 +35,5 @@ section .data
     STRING DB 'Hello world!', 0xa
     LENGTH EQU $ - STRING
 
-    STARS times 10 DB '*'
+    STARS TIMES 10 DB '*'
     STARS_LENGTH EQU $ - STARS
