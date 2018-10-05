@@ -4,30 +4,30 @@ STDIN     equ 0
 STDOUT    equ 1
 
 %macro write_string 2
-    mov eax, SYS_WRITE
-    mov ebx, STDOUT
-    mov ecx, %1
-    mov edx, %2
-    int 0x80
+    MOV EAX, SYS_WRITE
+    MOV EBX, STDOUT
+    MOV ECX, %1
+    MOV EDX, %2
+    INT 0x80
 %endmacro
 
 section .text
     global _start
     
 _start:
-    MOV [STRING], dword 'Robo'
+    MOV [STRING], DWORD 'Robo'
     write_string STRING, LENGTH
     write_string STARS, STARS_LENGTH
-    call exit
+    CALL exit
 
 exit:
-    mov eax, SYS_EXIT
-    int 0x80
+    MOV EAX, SYS_EXIT
+    INT 0x80
     ret
 
 section .data
-    STRING db 'Hello world!', 0xa
-    LENGTH equ $ - STRING
+    STRING DB 'Hello world!', 0xa
+    LENGTH EQU $ - STRING
 
-    STARS times 10 db '*'
-    STARS_LENGTH equ $ - STARS
+    STARS times 10 DB '*'
+    STARS_LENGTH EQU $ - STARS
