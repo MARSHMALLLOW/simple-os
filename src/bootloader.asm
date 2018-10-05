@@ -3,15 +3,20 @@ SYS_WRITE equ 4
 STDIN     equ 0
 STDOUT    equ 1
 
-section .text
-    global _start
-
-_start:
+%macro writeLine 2
     mov eax, SYS_WRITE
     mov ebx, STDOUT
-    mov ecx, STRING
-    mov edx, LENGTH
+    mov ecx, %1
+    mov edx, %2
     int 0x80
+%endmacro
+
+section .text
+    global _start
+    writeLine STRING LENGTH
+    
+_start:
+
 
     call exit
 
