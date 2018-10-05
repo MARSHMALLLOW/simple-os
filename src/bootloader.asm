@@ -1,7 +1,7 @@
-SYS_EXIT  equ 1
-SYS_WRITE equ 4
-STDIN     equ 0
-STDOUT    equ 1
+SYS_EXIT  EQU 1
+SYS_WRITE EQU 4
+STDIN     EQU 0
+STDOUT    EQU 1
 
 %macro write_string 2
     MOV EAX, SYS_WRITE
