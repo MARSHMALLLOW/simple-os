@@ -23,7 +23,7 @@ _start:
 exit:
     MOV EAX, SYS_EXIT
     INT 0x80
-    ret
+    RET
 
 section .data
     STRING DB 'Hello world!', 0xa
