@@ -19,11 +19,11 @@ _start:
     MOV ECX, 3
 
 loop:
-    push ECX
+    PUSH ECX
     write_string STRING, LENGTH
     write_string STARS, STARS_LENGTH
-    pop ECX
-    loop loop
+    POP ECX
+    LOOP loop
 
 CALL exit
 
