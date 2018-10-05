@@ -16,9 +16,16 @@ section .text
     
 _start:
     MOV [STRING], DWORD 'Robo'
+    MOV ECX, 3
+
+loop:
+    push ECX
     write_string STRING, LENGTH
     write_string STARS, STARS_LENGTH
-    CALL exit
+    pop ECX
+    loop loop
+
+CALL exit
 
 exit:
     MOV EAX, SYS_EXIT
