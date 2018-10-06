@@ -3,6 +3,8 @@
 [![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
 
+## Flowchart
+
 <img src="https://raw.githubusercontent.com/voyula/simple-os/master/flow_chart.png">
 
 ### 📜 Standards
