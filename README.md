@@ -5,7 +5,7 @@
 
 ## Flowchart
 
-<img src="https://raw.githubusercontent.com/voyula/simple-os/master/fc.png">
+<img src="https://raw.githubusercontent.com/voyula/simple-os/master/f_chart.png">
 
 ### 📜 Standards
 
