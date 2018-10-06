@@ -3,6 +3,8 @@
 [![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
 
+<img src="https://raw.githubusercontent.com/voyula/simple-os/master/diagram.png">
+
 ### 📜 Standards
 
 - [Semantic Versioning 2.0.0](https://semver.org/)
