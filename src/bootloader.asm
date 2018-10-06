@@ -8,7 +8,7 @@ STDOUT    EQU 1
     MOV EBX, STDOUT
     MOV ECX, %1
     MOV EDX, %2
-    INT 0x80
+    INT 80h
 %endmacro
 
 global _start
@@ -28,7 +28,7 @@ CALL exit
 
 exit:
     MOV EAX, SYS_EXIT
-    INT 0x80
+    INT 80h
     RET
 
 section .data
